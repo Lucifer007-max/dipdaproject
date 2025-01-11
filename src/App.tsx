@@ -5,8 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ClientRoute from './routes/ClientRoutes';
 import { Home } from './pages/client/Home';
 import { lazy } from 'react';
-const About = lazy(() => import('./pages/client/About').then(module => ({ default: module.About })));
 const Contact = lazy(() => import('./pages/client/Contact').then(module => ({ default: module.Contact })));
+const About = lazy(() => import('./pages/client/About').then(module => ({ default: module.About})));
 
 const App: React.FC  = () => {
   // const isLoggedInAdmin = sessionStorage.getItem("token") !== undefined ? true : false;

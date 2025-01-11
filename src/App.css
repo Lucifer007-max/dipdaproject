@@ -1,0 +1,20 @@
+/*       About     */
+
+.about-sec2{
+  margin: 40px;
+  font-family: 'Apercu pr', sans-serif;
+  font-weight: 300;
+  line-height: 2.5;
+  font-size: 20px;
+}
+   ul {
+  list-style-image: url('path-to-your-icon.png'); /* Replace with your custom icon */
+  margin: 0;
+  padding: 0 20px;
+}
+
+li {
+  margin-bottom: 10px; /* Spacing between list items */
+  font-size: 16px;
+  color: #333;
+}
