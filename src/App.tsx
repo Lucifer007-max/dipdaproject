@@ -6,6 +6,7 @@ import ClientRoute from './routes/ClientRoutes';
 import { Home } from './pages/client/Home';
 import { lazy } from 'react';
 const About = lazy(() => import('./pages/client/About').then(module => ({ default: module.About })));
+const Contact = lazy(() => import('./pages/client/Contact').then(module => ({ default: module.Contact })));
 
 const App: React.FC  = () => {
   // const isLoggedInAdmin = sessionStorage.getItem("token") !== undefined ? true : false;
@@ -144,7 +145,8 @@ const App: React.FC  = () => {
         {/* Client Routes */}
         <Route element={<ClientRoute isLoggedInClient={isLoggedInClient} />}>
             <Route index path="/" key="home" element={<Home />} />
-            <Route index path="/about" key="about" element={<About />} />
+            <Route path="/about" key="about" element={<About />} />
+            <Route path="/contact" key="contact" element={<Contact />} />
         </Route>
 
 
