@@ -3,8 +3,8 @@
 .about-sec2{
   margin: 40px;
   font-family: 'Apercu pr', sans-serif;
-  font-weight: 300;
-  line-height: 2.5;
+  font-weight: 700;
+  line-height: 1.5;
   font-size: 20px;
 }
    ul {
@@ -17,4 +17,17 @@ li {
   margin-bottom: 10px; /* Spacing between list items */
   font-size: 16px;
   color: #333;
+}
+
+.fade-in-right {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+h2{
+  font-size: 50px !important;
+}
+.data-scroll {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
