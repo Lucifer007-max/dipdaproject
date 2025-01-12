@@ -14,7 +14,7 @@ export const About = () => {
             const scrollInstance = new LocomotiveScroll({
                 el: scrollRef.current,
                 smooth: true,
-                lerp: 0.5, 
+                lerp: 0.1, // Adjust for smoothness
             });
 
             return () => {
