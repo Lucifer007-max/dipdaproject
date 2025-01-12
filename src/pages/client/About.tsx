@@ -6,21 +6,22 @@ import '../../App.css';
 
 
 export const About = () => {
-    // const scrollRef = useRef<any>(null);
+    //   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+    const scrollRef = useRef<any>(null);
 
-    // useEffect(() => {
-    //     if (scrollRef.current) {
-    //         const scrollInstance = new LocomotiveScroll({
-    //             el: scrollRef.current,
-    //             smooth: true,
-    //             lerp: 0.5, 
-    //         });
+    useEffect(() => {
+        if (scrollRef.current) {
+            const scrollInstance = new LocomotiveScroll({
+                el: scrollRef.current,
+                smooth: true,
+                lerp: 0.5, 
+            });
 
-    //         return () => {
-    //             scrollInstance.destroy(); // Cleanup to prevent memory leaks
-    //         };
-    //     }
-    // }, []);
+            return () => {
+                scrollInstance.destroy(); // Cleanup to prevent memory leaks
+            };
+        }
+    }, []);
 
     // const cardStyle = {
     //     background: '#ffffff', // White card background
@@ -46,7 +47,7 @@ export const About = () => {
 
 
     return (
-        <div style={{ overflow: 'hidden' }}>
+        <div data-scroll-container ref={scrollRef} style={{ overflow: 'hidden' }}>
             {/* Section 1 */}
             <header
                 className='about-header'
