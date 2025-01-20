@@ -19,12 +19,13 @@ const ClientLayout = (props: any) => {
   //     scrollInstance.destroy();
   //   };
   // }, []);
+  
   return (
     <div>
       <Container fluid className='p-0'>
         <Header />
         {props.children}
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     </div>
   )

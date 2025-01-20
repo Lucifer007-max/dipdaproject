@@ -90,13 +90,16 @@ body {
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.links {
+.links , .dropdown-toggle {
   position: relative;
-  height: 40px;
+  /* height: 40px; */
   display: inline-block;
   transition: opacity 0.3s ease-in-out;
-  width: 70px;
-  line-height: 2.3;
+  /* width: 70px; */
+  color: #fff !important;
+  /* line-height: 2.3; */
+  font-weight: 400;
+  font-size: 18px;
 }
 
 a {
@@ -117,16 +120,33 @@ a {
   height: 80vh;
 }
 
-
-.header-container {
+/* General styles for the header */
+.header-wrapper {
   /* position: relative; */
-  z-index: 1000;
-  background: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
 }
+
+.header-wrapper.sticky {
+  position: fixed;
+  top: 0;
+  /* background-color: #fff; */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Subtle shadow */
+}
+
+
+/* .header-container {
+  padding: 15px 20px;
+} */
+
+/* Ensure header transitions smoothly */
+.header-wrapper:not(.sticky) {
+  transform: translateY(0);
+}
+
 
 .header-navbar {
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -142,8 +162,11 @@ a {
 }
 
 .header-navbar ul li .links {
-  color: #333;
+  color: rgb(255, 255, 255);
   transition: color 0.3s ease;
+  font-size: 20px;
+  font-weight: 400;
+
 }
 
 .header-navbar ul li .links:hover {
@@ -159,4 +182,304 @@ a {
   display: block;
   z-index: 99;
   position: absolute;
+}
+
+
+
+
+
+
+
+/* Banner Section */
+.xrf-banner {
+  background: url('../../images/banner.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.xrf-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  position: relative;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.banner-title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.banner-description {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.banner-btn {
+  background: #e74c3c;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.banner-btn:hover {
+  background: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .xrf-banner {
+    height: 300px;
+  }
+  .banner-title {
+    font-size: 36px;
+  }
+  .banner-description {
+    font-size: 16px;
+  }
+  .banner-btn {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .xrf-banner {
+    height: 250px;
+  }
+  .banner-title {
+    font-size: 28px;
+  }
+  .banner-description {
+    font-size: 14px;
+  }
+  .banner-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+
+.xrf-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  background-color: #f9f9f9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.xrf-step {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.xrf-step:hover {
+  transform: translateY(-10px);
+}
+
+.xrf-title {
+  font-size: 22px;
+  text-align: left;
+
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.xrf-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.xrf-list li {
+  text-align: left;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.xrf-list li:hover {
+  color: #e74c3c;
+}
+
+.xrf-arrow {
+  font-size: 50px;
+  color: #3498db;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* Customer Benefits Section */
+.xrf-benefits {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.xrf-benefits .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.xrf-benefits h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.xrf-benefits ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.xrf-benefits ul li {
+  font-size: 20px;
+  color: #555;
+  padding: 10px 0;
+  position: relative;
+  padding-left: 30px;
+}
+
+.xrf-benefits ul li::before {
+  content: '✔';
+  color: #d2726f;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .xrf-benefits h2 {
+    font-size: 28px;
+  }
+
+  .xrf-benefits ul li {
+    font-size: 18px;
+  }
+}
+
+/* Call to Action Section */
+.xrf-cta {
+  background: linear-gradient(to right, #e0e0e0, #bdbdbd);
+  color: #333;
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 5px solid #9e9e9e;
+}
+
+.xrf-cta h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.xrf-cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #333;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #555;
+  color: #ffffff;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .xrf-cta h2 {
+    font-size: 28px;
+  }
+
+  .xrf-cta p {
+    font-size: 18px;
+  }
+
+  .cta-btn {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+}
+
+
+.margin_70 {
+  /* margin-top: 70px; */
+
 }

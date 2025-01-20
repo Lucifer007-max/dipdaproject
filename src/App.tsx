@@ -7,7 +7,9 @@ import { Home } from './pages/client/Home';
 import { lazy } from 'react';
 const Contact = lazy(() => import('./pages/client/Contact').then(module => ({ default: module.Contact })));
 const About = lazy(() => import('./pages/client/About').then(module => ({ default: module.About})));
-
+const Xray =  lazy(() => import('./pages/client/service/XrayAnalyzers').then(module => ({ default: module.XrayAnalyzers})));
+const Gammaray = lazy(() => import('./pages/client/service/Gammaray').then(module => ({ default: module.Gammaray})));
+const XRF = lazy(() => import('./pages/client/product/XrfSample').then(module => ({ default: module.XrfSample})));
 const App: React.FC  = () => {
   // const isLoggedInAdmin = sessionStorage.getItem("token") !== undefined ? true : false;
   const isLoggedInClient = sessionStorage.getItem("__ct") !== undefined ? true : false;
@@ -17,136 +19,16 @@ const App: React.FC  = () => {
     <>
      <BrowserRouter>
       <Routes>
-        {/* <Route element={<PublicRoute />}>
-          <Route path="/" element={<Navigate to="/client/signin" replace />} />
-          <Route path="/admin/signin" key="signin" element={<Signin />} />
-          <Route
-            path="/admin/forgotpassword"
-            key={"forgetpassword"}
-            element={<ForgotPassword />}
-          />
-          <Route
-            path="/admin/resetpassword/:token"
-            key="restpassword"
-            element={<ResetPassword />}
-          />
-          <Route
-            path="/client/signin"
-            key="clientsignin"
-            element={<ClientLogin />}
-          />
-          <Route
-            path="/client/signup"
-            key="clientsignin1"
-            element={<ClientSignUp />}
-          />
-          <Route
-            path="/client/forget-password"
-            key="client-forget-password"
-            element={<ClientForgetPassword />}
-          />
-          <Route
-            path="/client/reset-password/:token"
-            key="client-reset-password"
-            element={<ClientRestPassword />}
-          />
-        </Route> */}
-
-        {/* ADMIN ROUTES */}
-        {/* <Route element={<AdminRoute isLoggedInAdmin={isLoggedInAdmin} />}>
-          <Route path="admin">
-            <Route
-              index
-              path="dashboard"
-              key="dashboard"
-              element={<DashBoard />}
-            />
-            <Route path="client">
-              <Route
-                index
-                path="create"
-                key="client-create"
-                element={<ClientCreate />}
-              />
-              <Route
-                index
-                path="list"
-                key="client-list"
-                element={<ClientList />}
-              />
-              <Route
-                index
-                path="edit/:userId"
-                key="client-id"
-                element={<ClientCreate />}
-              />
-            </Route>
-            <Route path="admins">
-              <Route
-                index
-                path="create"
-                key="client-create"
-                element={<AdminCreate />}
-              />
-              <Route
-                index
-                path="list"
-                key="client-list"
-                element={<AdminList />}
-              />
-              <Route
-                index
-                path="edit/:userId"
-                key="client-id"
-                element={<AdminCreate />}
-              />
-            </Route>
-            <Route
-              index
-              path="permission-management"
-              key="permission-list"
-              element={<PermissionList />}
-            />
-            <Route
-              index
-              path="role-management"
-              key="role-list"
-              element={<RoleList />}
-            />
-            <Route path="profile" element={<Profile />} />
-            <Route path="commission">
-              <Route path="default-management" element={<Commission />}></Route>
-              <Route
-                path="agency-management"
-                element={<AgencyCommission />}
-              ></Route>
-            </Route>
-
-            <Route
-              path="recharge-management"
-              element={<RechargeList />}
-            ></Route>
-
-            <Route
-              path="geolocation-management"
-              element={<GeoLocation />}
-            ></Route>
-            <Route path="user-management">
-              <Route path="manage-user" element={<ManageUser />}></Route>
-              <Route
-                path="transaction-history"
-                element={<TransactionHistory />}
-              ></Route>
-              <Route path="user-activity" element={<UserActivity />}></Route>
-            </Route>
-          </Route>
-        </Route> */}
+     
 
         {/* Client Routes */}
         <Route element={<ClientRoute isLoggedInClient={isLoggedInClient} />}>
             <Route index path="/" key="home" element={<Home />} />
             <Route path="/about" key="about" element={<About />} />
             <Route path="/contact" key="contact" element={<Contact />} />
+            <Route path="/service/XrayAnalyzer" key="Xray" element={<Xray />} />
+            <Route path="/service/Gamma-ray" key="Gamma-ray" element={<Gammaray />} />
+            <Route path="/product/xrf-sample" key="xrf" element={<XRF />} />
         </Route>
 
 
