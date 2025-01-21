@@ -67,11 +67,11 @@ export function Header() {
                                 <DropdownToggle data-toggle="dropdown"
                                     tag="span" caret>Services</DropdownToggle>
                                 <DropdownMenu >
-                                    <DropdownItem> <Link className="links" to="/service/Gamma-ray">
+                                    <DropdownItem> <Link className="links" to="/service/Gamma-ray" onClick={toggleMenu}>
                                         Gamma Ray
                                     </Link></DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem> <Link className="links" to="/service/XrayAnalyzer">
+                                    <DropdownItem> <Link className="links" to="/service/XrayAnalyzer" onClick={toggleMenu}>
                                         Xray Analyzer
                                     </Link></DropdownItem>
                                 </DropdownMenu>
@@ -82,13 +82,13 @@ export function Header() {
                                 <DropdownToggle data-toggle="dropdown" tag="span" caret>Product</DropdownToggle>
                                 <DropdownMenu >
                                     <DropdownItem>
-                                        <Link className="links" to="/product/xrf-sample">
+                                        <Link className="links" to="/product/xrf-sample" onClick={toggleMenu}>
                                             XRF Sample
                                         </Link>
                                     </DropdownItem>
                                     <DropdownItem divider />
                                     <DropdownItem>
-                                        <Link className="links" to="/service/XrayAnalyzer">
+                                        <Link className="links" to="/service/XrayAnalyzer" onClick={toggleMenu}>
                                             Xray Analyzer
                                         </Link>
                                     </DropdownItem>

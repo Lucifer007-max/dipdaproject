@@ -7,9 +7,9 @@ import service2 from '../../../assets/service/SITECO-ORDINATOR.gif'
 import service3 from '../../../assets/service/SUPPORT247.gif'
 import service4 from '../../../assets/service/Supply&Replenishments.gif'
 import service5 from '../../../assets/service/SystemValidation.gif'
-import service6 from '../../../assets/service/training.gif'
+import banner from '../../../assets/breadcrumbs/xray.jpg'
 import { Footer } from "../../../components/common/Footer"
-
+import expert from '../../../assets/breadcrumbs/Expertise.gif'
 export const XrayAnalyzers = () => {
     const CardList = [
         {
@@ -45,7 +45,8 @@ export const XrayAnalyzers = () => {
     ]
     return (
         <div className="margin_70">
-            <CustomBreadcrum title={'Xray-Analyzers'} image={'GamaRays'} />
+
+            <CustomBreadcrum title={'Xray-Analyzers'} image={banner} baseLine={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, iusto.'}  />
             <Container>
                 <section className="my-5">
                     <Row className="justify-content-center">
@@ -58,8 +59,9 @@ export const XrayAnalyzers = () => {
                             <h2 className="text-priamry text-center">Unparalleled Expertise in PGNAA Systems</h2>
                             <h5 className="text-center mb-5"> Your Trusted Partner in Sales and Service Support</h5>
                             <Col md={6} className="position-relative">
-                                {/* <img src={SideImg} className="w-100" />
+                                {/* 
                                 <img src={Trusted} className="trusted_img" /> */}
+                                <img src={expert} className="w-75 d-block m-auto" />
                             </Col>
                             <Col md={6}>
                                 <h6>

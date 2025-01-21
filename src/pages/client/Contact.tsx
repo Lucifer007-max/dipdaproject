@@ -1,7 +1,8 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-
+import CustomBreadcrum from "../../components/breadcrum/Breadcrum";
+import contact from '../../assets/breadcrumbs/contact-us.gif'
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -16,6 +17,8 @@ export const Contact = () => {
 
   return (
     <div className="margin_70">
+            <CustomBreadcrum title={''} baseLine={''} image={contact} />
+
       <div className='contact_bg'>
         <h1 className='text-center'>In case you need to find us.<br />
           These are the coordinates for your biggest adventure yet.</h1>
