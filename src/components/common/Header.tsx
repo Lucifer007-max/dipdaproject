@@ -57,42 +57,64 @@ export function Header() {
                                 About
                             </Link>
                         </li>
-
+                        {/* SERVICE LINK */}
                         <li className="mx-3 mb-0">
                             <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={'down'}>
                                 <DropdownToggle data-toggle="dropdown"
                                     tag="span" caret>Services</DropdownToggle>
                                 <DropdownMenu >
-                                    <DropdownItem> <Link className="links" to="/service/Gamma-ray" onClick={toggleMenu}>
-                                        Gamma Ray
-                                    </Link></DropdownItem>
+                                    <DropdownItem>
+                                        <Link className="links" to="/service/xray-analyzer" onClick={toggleMenu}>
+                                            X-RAY Analyzer
+                                        </Link>
+                                    </DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem> <Link className="links" to="/service/XrayAnalyzer" onClick={toggleMenu}>
-                                        Xray Analyzer
-                                    </Link></DropdownItem>
+                                    <DropdownItem>
+                                        <Link className="links" to="/service/pgnaa-analyzer" onClick={toggleMenu}>
+                                            PGNAA  Analyzer
+                                        </Link>
+                                    </DropdownItem>
+                                    {/* <DropdownItem divider />
+                                    <DropdownItem>
+                                        <Link className="links" to="/service/pgnaa-analyzer" onClick={toggleMenu}>
+                                            Analytical Process & Quality Control
+                                        </Link>
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <Link className="links" to="/service/pgnaa-analyzer" onClick={toggleMenu}>
+                                            Radtion Service Product
+                                        </Link>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Link className="links" to="/service/pgnaa-analyzer" onClick={toggleMenu}>
+                                            Environmental & Geological Engineering
+                                        </Link>
+                                    </DropdownItem> */}
                                 </DropdownMenu>
                             </Dropdown>
                         </li>
+                        {/* PRODUCT LINKS */}
                         <li className="mx-3 mb-0">
                             <Dropdown isOpen={dropdownOpen2} toggle={toggle2} direction={'down'}>
                                 <DropdownToggle data-toggle="dropdown" tag="span" caret>Product</DropdownToggle>
                                 <DropdownMenu >
                                     <DropdownItem>
-                                        <Link className="links" to="/product/xrf-sample" onClick={toggleMenu}>
-                                            XRF Sample
+                                        <Link className="links" to="/product/xrf-sample-preperation-product" onClick={toggleMenu}>
+                                            XRF Sample Preperation Product
                                         </Link>
                                     </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        <Link className="links" to="/service/XrayAnalyzer" onClick={toggleMenu}>
-                                            Xray Analyzer
+                                    {/* <DropdownItem divider /> */}
+                                    {/* <DropdownItem>
+                                        <Link className="links" to="/product/radiation-isotope-products" onClick={toggleMenu}>
+                                            Radiation Isotope Products
                                         </Link>
-                                    </DropdownItem>
+                                    </DropdownItem> */}
                                 </DropdownMenu>
                             </Dropdown>
                         </li>
                         <li className="mx-3 mb-0">
-                            <Link className="links" to="/contact" onClick={toggleMenu}>
+                            <Link className="links" to="/training" onClick={toggleMenu}>
                                 Training
                             </Link>
                         </li>

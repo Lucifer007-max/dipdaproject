@@ -7,9 +7,10 @@ import { Home } from './pages/client/Home';
 import { lazy } from 'react';
 const Contact = lazy(() => import('./pages/client/Contact').then(module => ({ default: module.Contact })));
 const About = lazy(() => import('./pages/client/About').then(module => ({ default: module.About})));
-const Xray =  lazy(() => import('./pages/client/service/XrayAnalyzers').then(module => ({ default: module.XrayAnalyzers})));
-const Gammaray = lazy(() => import('./pages/client/service/Gammaray').then(module => ({ default: module.Gammaray})));
+const XRAYAnalyzer =  lazy(() => import('./pages/client/service/XrayAnalyzers').then(module => ({ default: module.XrayAnalyzers})));
+const PGNAAAnalyzer = lazy(() => import('./pages/client/service/Gammaray').then(module => ({ default: module.Gammaray})));
 const XRF = lazy(() => import('./pages/client/product/XrfSample').then(module => ({ default: module.XrfSample})));
+const Traning = lazy(() => import('./pages/client/Traning').then(module => ({ default: module.Traning})));
 const App: React.FC  = () => {
   // const isLoggedInAdmin = sessionStorage.getItem("token") !== undefined ? true : false;
   const isLoggedInClient = sessionStorage.getItem("__ct") !== undefined ? true : false;
@@ -23,12 +24,17 @@ const App: React.FC  = () => {
 
         {/* Client Routes */}
         <Route element={<ClientRoute isLoggedInClient={isLoggedInClient} />}>
-            <Route index path="/" key="home" element={<Home />} />
-            <Route path="/about" key="about" element={<About />} />
+            <Route index path="/about" key="home" element={<Home />} />
+            <Route path="/" key="about" element={<About />} />
             <Route path="/contact" key="contact" element={<Contact />} />
-            <Route path="/service/XrayAnalyzer" key="Xray" element={<Xray />} />
-            <Route path="/service/Gamma-ray" key="Gamma-ray" element={<Gammaray />} />
-            <Route path="/product/xrf-sample" key="xrf" element={<XRF />} />
+            <Route path="/service/xray-analyzer" key="xray-analyzer" element={<XRAYAnalyzer />} />
+            <Route path="/service/pgnaa-analyzer" key="pgnaa-analyzer" element={<PGNAAAnalyzer />} />
+            <Route path="/product/xrf-sample-preperation-product" key="xrf-sample-preperation-product" element={<XRF />} />
+            {/* <Route path="/product/radiation-isotope-products" key="radiation-isotope-products" element={<XRF />} /> */}
+
+            <Route path="/training" key="training" element={<Traning />} />
+        
+            <Route path="*"  element={<>404 NOT FOUND</>} />
         </Route>
 
 

@@ -1,12 +1,12 @@
 import "../../App.css";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
-
+import Logo from '../../assets/logo.png'
 export function Footer() {
     return (
         <footer className="footer">
             {/* Left Section */}
             <div className="footer-left">
-                <h2 className="footer-logo">SPECTRA</h2>
+                <h2 className="footer-logo"><img src={Logo} className="w-50"/></h2>
                 <p className="footer-description">
                     Delivering excellence with sustainability and innovation.
                 </p>
