@@ -43,12 +43,12 @@ export function Header() {
                     <NavbarBrand to="/">
                         <img src={Logo} width={150} alt="logo" />
                     </NavbarBrand>
-                    <button className="menu-toggle-btn" onClick={toggleMenu}>
+                    <button className="menu-toggle-btn d-lg-none d-xl-none d-sm-block d-block d-md-none" onClick={toggleMenu}>
                         <span className="menu-icon">&#9776;</span> {/* Hamburger Icon */}
                     </button>
                     <ul className={`nav-menu-overlay d-flex list-style-none m-0 p-0 ${isMenuOpen ? "open" : ""}`} >
                         <li className="mx-3 mb-0">
-                            <Link className="links" to="/"onClick={toggleMenu}>
+                            <Link className="links" to="/" onClick={toggleMenu}>
                                 Home
                             </Link>
                         </li>
@@ -57,11 +57,7 @@ export function Header() {
                                 About
                             </Link>
                         </li>
-                        <li className="mx-3 mb-0">
-                            <Link className="links" to="/contact" onClick={toggleMenu}>
-                                Contact
-                            </Link>
-                        </li>
+
                         <li className="mx-3 mb-0">
                             <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={'down'}>
                                 <DropdownToggle data-toggle="dropdown"
@@ -95,9 +91,29 @@ export function Header() {
                                 </DropdownMenu>
                             </Dropdown>
                         </li>
-                    <button className="close-menu-btn" onClick={toggleMenu}>
-                        &times; {/* Close Icon */}
-                    </button>
+                        <li className="mx-3 mb-0">
+                            <Link className="links" to="/contact" onClick={toggleMenu}>
+                                Training
+                            </Link>
+                        </li>
+                        <li className="mx-3 mb-0">
+                            <Link className="links" to="/contact" onClick={toggleMenu}>
+                                Expertise
+                            </Link>
+                        </li>
+                        <li className="mx-3 mb-0">
+                            <Link className="links" to="/contact" onClick={toggleMenu}>
+                                Our Network
+                            </Link>
+                        </li>
+                        <li className="mx-3 mb-0">
+                            <Link className="links" to="/contact" onClick={toggleMenu}>
+                                Contact Us
+                            </Link>
+                        </li>
+                        <button className="close-menu-btn d-lg-none d-xl-none d-sm-block d-block d-md-none" onClick={toggleMenu}>
+                            &times; {/* Close Icon */}
+                        </button>
                     </ul>
                 </Navbar>
             </Container>

@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import CustomBreadcrum from "../../components/breadcrum/Breadcrum";
-import contact from '../../assets/breadcrumbs/contact-us.gif'
+import contact from '../../assets/contact/contact.svg'
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -13,11 +13,11 @@ L.Icon.Default.mergeOptions({
 export const Contact = () => {
 
   const position: [number, number] = [51.505, -0.09]; // Default coordinates (London)
-// Fix default icon issue with Leaflet
+  // Fix default icon issue with Leaflet
 
   return (
     <div className="margin_70">
-            <CustomBreadcrum title={''} baseLine={''} image={contact} />
+      <CustomBreadcrum title={'CONTACT US'} baseLine={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis.'} image={contact} />
 
       <div className='contact_bg'>
         <h1 className='text-center'>In case you need to find us.<br />
@@ -31,13 +31,13 @@ export const Contact = () => {
           style={{ height: "400px", width: "100%" }}
         >
           {/* TileLayer defines the map appearance */}
-          {/* <TileLayer
+        {/* <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           /> */}
 
-          {/* Example marker */}
-          {/* <Marker position={position}>
+        {/* Example marker */}
+        {/* <Marker position={position}>
             <Popup>
               A marker in London. <br /> Easily customizable.
             </Popup>

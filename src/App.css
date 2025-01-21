@@ -422,6 +422,9 @@ h2 {
 
 .top_banner {
   position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .top_banner::before {
@@ -572,7 +575,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(0 0 0 / 95%);
+    background: #b84e4a;
     transform: translateY(-100%);
     transition: transform 0.5s ease-in-out;
     z-index: 9999;
@@ -660,9 +663,12 @@ h2 {
     .header-container ul {
       display: none;
     }
+
+    .top_banner {
+      min-height: 50vh !important;
+      min-width: 100vw !important;
+    }
   }
-
-
 
 
 

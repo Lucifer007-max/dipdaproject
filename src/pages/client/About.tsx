@@ -2,12 +2,15 @@ import "../../App.css";
 import { useEffect, useRef, useState } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import Aboutimg from "../../assets/about/about-sec1.jpg";
-import WhoArewe from "../../assets/about/whoarewe.gif";
-import Aboutimg2 from "../../assets/about/about-sec-img2.jpg";
+import Aboutimg from "../../assets/about/task.gif";
+import Questioon from "../../assets/about/Questions.gif";
+import Aboutimg2 from "../../assets/about/Team spirit-rafiki.svg";
+import Question from "../../assets/about/Questions-pana.svg";
 import { Footer } from "../../components/common/Footer";
-import Banner from '../../assets/about/About.jpg'
+import Banner from '../../assets/breadcrumbs/about.png'
 import { Col, Container, Row } from "reactstrap";
+import CustomBreadcrum from "../../components/breadcrum/Breadcrum";
+
 export const About = () => {
     const [experience, setExperience] = useState(0);
     const [clients, setClients] = useState(0);
@@ -36,28 +39,30 @@ export const About = () => {
         <div className="margin_70">
             <div >
                 {/* Section 1 */}
-                <section className="about-header top_banner" style={{ minHeight: "100vh", background: `url(${Banner})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} >
+                {/* <section className="about-header top_banner" style={{ minHeight: "100vh", background: `url(${Banner})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} >
                     <Container>
                         <div className="banner_text" style={{ zIndex: 9 }}  >
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, est.</p>
                             <p style={{ fontSize: "45px", fontWeight: "400" }}>About Us</p>
                         </div>
                     </Container>
-                </section>
+                </section> */}
 
-
+                <CustomBreadcrum title={'About Us'} baseLine={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, sit?'} image={Banner} />
 
                 <div className="padding_tb">
                     <Container>
                         <Row className="align-items-start">
                             <Col md={6}>
-                                <h2 className="title mb-3">Who we are ?</h2>
+                                <h2 className="title mb-3">Who we are ?
+
+                                </h2>
                                 <p className="sub_title">GeoSpectra Technical Services LLC, based in Dubai, UAE, offers cost-effective technical and application support for analytical instruments like XRF, XRD, and OES analyzers. We specialize in "mission-critical" environments across the Middle East and Africa.</p>
                             </Col>
                             <Col md={6} className="position-relative">
 
-                                <img className="d-block m-auto width_size" height={300} src={Aboutimg} alt="GeoSpectra" />
-                                <img className="w-25 position-absolute bottom-0" src={WhoArewe} alt="GeoSpectra" />
+                                    <img  className="position-relative bottom-0 w-75 d-block m-auto" src={Questioon} alt="GeoSpectra" />
+                                {/* <img className="d-block m-auto width_size" height={300} src={Aboutimg2} alt="GeoSpectra" /> */}
                             </Col>
                         </Row>
                     </Container>
@@ -67,7 +72,7 @@ export const About = () => {
                     <Container>
                         <Row className="align-items-start">
                             <Col md={4}>
-                                <img className="d-block m-auto position-relative industry_banner" style={{ zIndex: '99' }} height={300} src={Aboutimg} alt="GeoSpectra" />
+                                <img className="d-block m-auto position-relative industry_banner" style={{ zIndex: '99' }}  src={Aboutimg} alt="GeoSpectra" />
                             </Col>
                             <Col md={1}></Col>
                             <Col md={6} className="">
@@ -206,15 +211,15 @@ export const About = () => {
                                 </ul>
 
                                 <div className="counter-container row">
-                                    <div className="counter-item col-4 col-12">
+                                    <div className="counter-item col-md-4 col-12">
                                         <h2 className="counter-number">{experience}+</h2>
                                         <p className="counter-text">Years of Experience</p>
                                     </div>
-                                    <div className="counter-item  col-4 col-12">
+                                    <div className="counter-item  col-md-4 col-12">
                                         <h2 className="counter-number">{clients}+</h2>
                                         <p className="counter-text">Total Clients</p>
                                     </div>
-                                    <div className="counter-item  col-4 col-12">
+                                    <div className="counter-item  col-md-4 col-12">
                                         <h2 className="counter-number">{years}+</h2>
                                         <p className="counter-text">Years in Business</p>
                                     </div>

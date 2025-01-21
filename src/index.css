@@ -526,7 +526,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
   /* background-color: #fef8f6; */
   /* Light background */
 }
