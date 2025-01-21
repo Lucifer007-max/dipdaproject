@@ -54,9 +54,10 @@ export function Gammaray() {
 
   return (
     <div className="margin_70">
-      <CustomBreadcrum title={'PGNAA-Analyzers'} image={GamaRays} />
+      <CustomBreadcrum title={'PGNAA-Analyzers'} baseLine={' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ratione!'} image={GamaRays} />
       <Container>
-        <section className="my-5">
+      {/* className="padding_tb" */}
+        <section className="padding_tb">
           <Row className="justify-content-center">
             {
               CardList.map((res) => {
@@ -106,7 +107,7 @@ export function Gammaray() {
           </Row>
         </section>
       </Container>
-
+           
       <Footer />
     </div>
   )

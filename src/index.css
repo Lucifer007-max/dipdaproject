@@ -90,7 +90,8 @@ body {
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.links , .dropdown-toggle {
+.links,
+.dropdown-toggle {
   position: relative;
   /* height: 40px; */
   display: inline-block;
@@ -127,7 +128,8 @@ a {
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease-in-out; /* Smooth transition */
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition */
 }
 
 .header-wrapper.sticky {
@@ -162,7 +164,7 @@ a {
 }
 
 .header-navbar ul li .links {
-  color: rgb(255, 255, 255);
+  color: #111;
   transition: color 0.3s ease;
   font-size: 20px;
   font-weight: 400;
@@ -172,6 +174,14 @@ a {
 .header-navbar ul li .links:hover {
   color: #007bff;
 }
+
+
+
+
+
+
+
+
 
 .contact_bg::before {
   content: '';
@@ -251,18 +261,37 @@ a {
 
 /* Animations */
 @keyframes fadeInDown {
-  0% { opacity: 0; transform: translateY(-50px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(50px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Responsive Design */
@@ -270,12 +299,15 @@ a {
   .xrf-banner {
     height: 300px;
   }
+
   .banner-title {
     font-size: 36px;
   }
+
   .banner-description {
     font-size: 16px;
   }
+
   .banner-btn {
     font-size: 18px;
   }
@@ -285,12 +317,15 @@ a {
   .xrf-banner {
     height: 250px;
   }
+
   .banner-title {
     font-size: 28px;
   }
+
   .banner-description {
     font-size: 14px;
   }
+
   .banner-btn {
     font-size: 16px;
     padding: 10px 20px;
@@ -354,13 +389,17 @@ a {
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
+
 /* Customer Benefits Section */
 .xrf-benefits {
   background: #f4f4f4;
@@ -481,5 +520,39 @@ a {
 
 .margin_70 {
   /* margin-top: 70px; */
+}
 
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #fef8f6; */
+  /* Light background */
+}
+
+.counter-item {
+  text-align: center;
+}
+
+.counter-number {
+  font-size: 8rem !important;
+  font-family: system-ui;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #e57352;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+.counter-label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 10px;
+}
+
+.width_size {
+  width: 400px;
 }

@@ -1,24 +1,15 @@
-export default function CustomBreadcrum({ title, image }: any) {
-  return (
-    <div
-      className='breadcrums'
-      // data-scroll-section
-      style={{
-        minHeight: '40vh',
-        background: `url(${image})`,
-        backgroundRepeat:'no-repeat',
-        backgroundSize:'cover',
-        backgroundPosition:'center',
+import { Container } from "reactstrap"
 
-        color: 'white',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      <h1 data-scroll data-scroll-speed="2" style={{zIndex:'99'}}> {title}</h1>
-      {/* <img src={image} alt="" /> */}
-    </div>
+export default function CustomBreadcrum({ title, baseLine, image }: any) {
+  return (
+    <div className="about-header top_banner" style={{ minHeight: "100vh", background: `url(${image})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+      <Container>
+        <div className="banner_text" style={{ zIndex: 9 }}  >
+          <p>{baseLine}.</p>
+          <p style={{ fontSize: "45px", fontWeight: "400" }}>{title}</p>
+        </div>
+      </Container>
+    </div >
   )
 }
 
