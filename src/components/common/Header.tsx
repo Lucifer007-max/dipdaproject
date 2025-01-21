@@ -48,17 +48,17 @@ export function Header() {
                     </button>
                     <ul className={`nav-menu-overlay d-flex list-style-none m-0 p-0 ${isMenuOpen ? "open" : ""}`} >
                         <li className="mx-3 mb-0">
-                            <Link className="links" to="/">
+                            <Link className="links" to="/"onClick={toggleMenu}>
                                 Home
                             </Link>
                         </li>
                         <li className="mx-3 mb-0">
-                            <Link className="links" to="/about">
+                            <Link className="links" to="/about" onClick={toggleMenu}>
                                 About
                             </Link>
                         </li>
                         <li className="mx-3 mb-0">
-                            <Link className="links" to="/contact">
+                            <Link className="links" to="/contact" onClick={toggleMenu}>
                                 Contact
                             </Link>
                         </li>
