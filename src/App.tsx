@@ -25,8 +25,8 @@ const App: React.FC = () => {
 
           {/* Client Routes */}
           <Route element={<ClientRoute isLoggedInClient={isLoggedInClient} />}>
-            <Route index path="/about" key="home" element={<Home />} />
-            <Route path="/" key="about" element={<About />} />
+            <Route index path="/" key="home" element={<Home />} />
+            <Route path="/about" key="about" element={<About />} />
             <Route path="/contact" key="contact" element={<Contact />} />
             <Route path="/service/xray-analyzer" key="xray-analyzer" element={<XRAYAnalyzer />} />
             <Route path="/service/pgnaa-analyzer" key="pgnaa-analyzer" element={<PGNAAAnalyzer />} />
