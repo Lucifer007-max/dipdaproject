@@ -65,7 +65,7 @@ body {
   top: 50%;
   transform: translate(-100%, -50%);
   /* Move to the left when hovered */
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   opacity: 1;
   /* Make visible on hover */
@@ -97,7 +97,7 @@ body {
   display: inline-block;
   transition: opacity 0.3s ease-in-out;
   /* width: 70px; */
-  color: #fff !important;
+  color: #111 !important;
   /* line-height: 2.3; */
   font-weight: 400;
   font-size: 18px;
@@ -122,19 +122,18 @@ a {
 }
 
 /* General styles for the header */
-.header-wrapper {
+/* .header-wrapper {
   /* position: relative; */
-  position: fixed;
+  /* position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease-in-out;
-  /* Smooth transition */
-}
+  transition: all 0.3s ease-in-out; */
+/* } */ 
 
 .header-wrapper.sticky {
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
   /* background-color: #fff; */
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Subtle shadow */
 }
@@ -195,7 +194,9 @@ a {
 }
 
 
-
+.nav-menu-overlay {
+  /* overflow: hidden; */
+}
 
 
 

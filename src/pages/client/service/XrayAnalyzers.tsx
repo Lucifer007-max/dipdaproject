@@ -7,7 +7,7 @@ import service2 from '../../../assets/service/SITECO-ORDINATOR.gif'
 import service3 from '../../../assets/service/SUPPORT247.gif'
 import service4 from '../../../assets/service/Supply&Replenishments.gif'
 import service5 from '../../../assets/service/SystemValidation.gif'
-import banner from '../../../assets/service/Analyze.svg'
+import banner from '../../../assets/breadcrumbs/xray.jpg'
 import { Footer } from "../../../components/common/Footer"
 import expert from '../../../assets/breadcrumbs/Expertise.gif'
 export const XrayAnalyzers = () => {

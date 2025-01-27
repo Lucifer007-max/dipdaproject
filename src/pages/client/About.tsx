@@ -7,7 +7,7 @@ import Questioon from "../../assets/about/Questions.gif";
 import Aboutimg2 from "../../assets/about/Team spirit-rafiki.svg";
 import Question from "../../assets/about/Questions-pana.svg";
 import { Footer } from "../../components/common/Footer";
-import Banner from '../../assets/breadcrumbs/about.png'
+import Banner from '../../assets/breadcrumbs/about.jpg'
 import { Col, Container, Row } from "reactstrap";
 import CustomBreadcrum from "../../components/breadcrum/Breadcrum";
 

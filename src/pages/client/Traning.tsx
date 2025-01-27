@@ -1,5 +1,5 @@
 import CustomBreadcrum from "../../components/breadcrum/Breadcrum";
-import Training from '../../assets/breadcrumbs/Training.svg';
+import Training from '../../assets/breadcrumbs/training.jpg';
 import Image1 from '../../assets/training/Company.gif'
 import { Col, Container, Row } from "reactstrap";
 import { Footer } from "../../components/common/Footer";

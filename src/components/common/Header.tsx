@@ -37,22 +37,22 @@ export function Header() {
 
 
     return (
-        <div className={`header-wrapper ${isSticky ? "sticky" : ""}`}>
+        <div className={`header-wrapper`}>
             <Container className="header-container">
                 <Navbar>
                     <NavbarBrand to="/">
-                        <img src={Logo} width={150} alt="logo" />
+                        <img src={'https://www.geospectratech.com/images/logo.png'} width={150} alt="logo" />
                     </NavbarBrand>
                     <button className="menu-toggle-btn d-lg-none d-xl-none d-sm-block d-block d-md-none" onClick={toggleMenu}>
                         <span className="menu-icon">&#9776;</span> {/* Hamburger Icon */}
                     </button>
                     <ul className={`nav-menu-overlay d-flex list-style-none m-0 p-0 ${isMenuOpen ? "open" : ""}`} >
-                        <li className="mx-3 mb-0">
+                        <li className="mx-3 overflow-hidden mb-0">
                             <Link className="links" to="/" onClick={toggleMenu}>
                                 Home
                             </Link>
                         </li>
-                        <li className="mx-3 mb-0">
+                        <li className="mx-3 overflow-hidden mb-0">
                             <Link className="links" to="/about" onClick={toggleMenu}>
                                 About
                             </Link>
@@ -113,22 +113,22 @@ export function Header() {
                                 </DropdownMenu>
                             </Dropdown>
                         </li>
-                        <li className="mx-3 mb-0">
+                        <li className="mx-3 overflow-hidden mb-0">
                             <Link className="links" to="/training" onClick={toggleMenu}>
                                 Training
                             </Link>
                         </li>
-                        <li className="mx-3 mb-0">
+                        <li className="mx-3 overflow-hidden mb-0">
                             <Link className="links" to="/contact" onClick={toggleMenu}>
                                 Expertise
                             </Link>
                         </li>
-                        <li className="mx-3 mb-0">
+                        <li className="mx-3 overflow-hidden mb-0">
                             <Link className="links" to="/contact" onClick={toggleMenu}>
                                 Our Network
                             </Link>
                         </li>
-                        <li className="mx-3 mb-0">
+                        <li className="mx-3 overflow-hidden mb-0">
                             <Link className="links" to="/contact" onClick={toggleMenu}>
                                 Contact Us
                             </Link>
