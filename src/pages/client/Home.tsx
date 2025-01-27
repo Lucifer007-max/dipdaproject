@@ -9,6 +9,7 @@ import arrow from '../../assets/home/downarrow.gif'
 import { Footer } from '../../components/common/Footer'
 import { useEffect, useRef } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
+import pin from '../../assets/map-pin.png'
 export function Home() {
 
   const scrollRef = useRef<any>(null);
@@ -194,7 +195,7 @@ export function Home() {
           onLoad={(event) => {
             const map = event.target;
             if (!map.hasImage("custom-icon")) {
-              map.loadImage("https://openclipart.org/image/2400px/svg_to_png/169839/map-pin.png", (error, image) => {
+              map.loadImage(pin, (error, image) => {
                 if (error) throw error;
                 map.addImage("custom-icon", image as any);
               });

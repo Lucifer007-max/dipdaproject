@@ -10,7 +10,9 @@ import { Footer } from "../../components/common/Footer";
 import Banner from '../../assets/breadcrumbs/about.jpg'
 import { Col, Container, Row } from "reactstrap";
 import CustomBreadcrum from "../../components/breadcrum/Breadcrum";
-
+import whoarewe from '../../assets/about/whoarewe.mp4'
+import tools from "../../assets/about/tools.gif"
+import books from '../../assets/about/books.gif'
 export const About = () => {
     const [experience, setExperience] = useState(0);
     const [clients, setClients] = useState(0);
@@ -54,14 +56,17 @@ export const About = () => {
                     <Container>
                         <Row className="align-items-start">
                             <Col md={6}>
-                                <h2 className="title mb-3">Who we are ?
-
+                                <h2 className="h2_effect ">
+                                    <span className="h2_border text-center" data-text="Who Are We ?">Who Are We ?</span>
                                 </h2>
                                 <p className="sub_title">GeoSpectra Technical Services LLC, based in Dubai, UAE, offers cost-effective technical and application support for analytical instruments like XRF, XRD, and OES analyzers. We specialize in "mission-critical" environments across the Middle East and Africa.</p>
                             </Col>
                             <Col md={6} className="position-relative">
-
-                                    <img  className="position-relative bottom-0 w-75 d-block m-auto" src={Questioon} alt="GeoSpectra" />
+                                <video width="100%" height={'100%'} className='d-block m-auto' controls={false} autoPlay={true} loop={true} muted>
+                                    <source src={whoarewe} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                                {/* <img className="position-relative bottom-0 w-75 d-block m-auto" src={Questioon} alt="GeoSpectra" /> */}
                                 {/* <img className="d-block m-auto width_size" height={300} src={Aboutimg2} alt="GeoSpectra" /> */}
                             </Col>
                         </Row>
@@ -72,7 +77,7 @@ export const About = () => {
                     <Container>
                         <Row className="align-items-start">
                             <Col md={4}>
-                                <img className="d-block m-auto position-relative industry_banner" style={{ zIndex: '99' }}  src={Aboutimg} alt="GeoSpectra" />
+                                <img className="d-block m-auto position-relative industry_banner" style={{ zIndex: '99' }} src={Aboutimg} alt="GeoSpectra" />
                             </Col>
                             <Col md={1}></Col>
                             <Col md={6} className="">
@@ -121,17 +126,8 @@ export const About = () => {
                     <Container>
                         <Row>
                             <section>
-                                <h2
-                                    // data-scroll
-                                    // data-scroll-speed="2"
-                                    style={{
-                                        fontSize: "32px",
-                                        color: "#333",
-                                        marginBottom: "20px",
-                                        textAlign: "left",
-                                    }}
-                                >
-                                    Our Experience
+                                <h2 className="h2_effect ">
+                                    <span className="h2_border text-center" data-text="Our Experience">Our Experience</span>
                                 </h2>
                                 <p
                                     style={{
@@ -145,94 +141,104 @@ export const About = () => {
                                     the past, worked with various original equipment manufacturers at
                                     senior positions.
                                 </p>
-                                <ul
-                                    style={{
-                                        listStyle: "none", // Remove default bullet points
-                                        padding: "0",
-                                        margin: "0",
-                                        display: "flex",
-                                        flexDirection: "column",
-                                        gap: "15px", // Space between list items
-                                    }}
+                                <Row
+                                // style={{
+                                //     listStyle: "none", // Remove default bullet points
+                                //     padding: "0",
+                                //     margin: "0",
+                                //     display: "flex",
+                                //     flexDirection: "column",
+                                //     gap: "15px", // Space between list items
+                                // }}
                                 >
                                     {[
-                                        {
-                                            text: "As Sales & Service Manager at Thermo Fischer Scientific PGNAA systems – have sold and supported over 150 systems in Middle East, Africa and worldwide.",
-                                            icon: "🌍",
-                                        },
+                                        // {
+                                        //     text: "As Sales & Service Manager at Thermo Fischer Scientific PGNAA systems – have sold and supported over 150 systems in Middle East, Africa and worldwide.",
+                                        //     icon: "🌍",
+                                        // },
                                         {
                                             text: "As Senior Service Engineers at Thermo Fischer Scientific (BMA, CBA, CBGN, CBX, OMNI, FSA, EBA), supporting more than 150 systems in Middle East, Africa and worldwide.",
-                                            icon: "🛠️",
+                                            icon: tools,
                                         },
-                                        {
-                                            text: "As Senior Field Engineers for PGNAA at Thermo Fisher, Scantech and other similar product manufacturers.",
-                                            icon: "🔧",
-                                        },
-                                        {
-                                            text: "As Field Service Engineers – Primary Support",
-                                            icon: "👨‍🔧",
-                                        },
+                                        // {
+                                        //     text: "As Senior Field Engineers for PGNAA at Thermo Fisher, Scantech and other similar product manufacturers.",
+                                        //     icon: "🔧",
+                                        // },
+                                        // {
+                                        //     text: "As Field Service Engineers – Primary Support",
+                                        //     icon: "👨‍🔧",
+                                        // },
                                         {
                                             text: "As Technical Experts – Secondary Support",
-                                            icon: "📚",
+                                            icon: books,
                                         },
                                     ].map((item, index) => (
-                                        <li
+                                        <Col md={4}
                                             key={index}
-                                            style={{
-                                                display: "flex",
-                                                alignItems: "flex-start",
-                                                gap: "15px",
-                                                padding: "15px",
-                                                background: "#fff",
-                                                borderRadius: "12px",
-                                                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                                                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                                            }}
+
                                             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
                                             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                                         >
-                                            <span
+                                            <div
                                                 style={{
-                                                    fontSize: "24px",
-                                                    color: "#007BFF", // Vibrant icon color
-                                                    flexShrink: "0",
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    flexDirection: "column",
+
+                                                    // gap: "15px",
+                                                    padding: "15px",
+                                                    height: '300px',
+                                                    background: "#fff",
+                                                    borderRadius: "12px",
+                                                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                                                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
                                                 }}
                                             >
-                                                {item.icon}
-                                            </span>
-                                            <span
-                                                style={{ fontSize: "16px", color: "#333", lineHeight: "1.5" }}
-                                            >
-                                                {item.text}
-                                            </span>
-                                        </li>
-                                    ))}
-                                </ul>
 
-                                <div className="counter-container row">
-                                    <div className="counter-item col-md-4 col-12">
-                                        <h2 className="counter-number">{experience}+</h2>
-                                        <p className="counter-text">Years of Experience</p>
-                                    </div>
-                                    <div className="counter-item  col-md-4 col-12">
-                                        <h2 className="counter-number">{clients}+</h2>
-                                        <p className="counter-text">Total Clients</p>
-                                    </div>
-                                    <div className="counter-item  col-md-4 col-12">
-                                        <h2 className="counter-number">{years}+</h2>
-                                        <p className="counter-text">Years in Business</p>
-                                    </div>
-                                </div>
+
+                                                <span
+                                                    style={{
+                                                        fontSize: "24px",
+                                                        color: "#007BFF", // Vibrant icon color
+                                                        flexShrink: "0",
+                                                    }}
+                                                >
+                                                    <img src={item.icon} />
+                                                </span>
+                                                <span
+                                                    style={{ fontSize: "16px", color: "#333", lineHeight: "1.5" }}
+                                                >
+                                                    {item.text}
+                                                </span>
+                                            </div>
+                                        </Col>
+                                    ))}
+                                </Row>
+
+
                             </section>
 
                         </Row>
+                        <div className="counter-container row mt-lg-5 mt-3">
+                            <div className="counter-item col-md-4 col-12">
+                                <h2 className="counter-number">{experience}+</h2>
+                                <p className="counter-text">Years of Experience</p>
+                            </div>
+                            <div className="counter-item  col-md-4 col-12">
+                                <h2 className="counter-number">{clients}+</h2>
+                                <p className="counter-text">Total Clients</p>
+                            </div>
+                            <div className="counter-item  col-md-4 col-12">
+                                <h2 className="counter-number">{years}+</h2>
+                                <p className="counter-text">Years in Business</p>
+                            </div>
+                        </div>
 
                     </Container>
                 </div>
 
                 {/* Section 4 */}
-                <section
+                {/* <section
                     // data-scroll-section
                     style={{
                         minHeight: "80vh",
@@ -247,7 +253,7 @@ export const About = () => {
                     <Container>
                         <div style={{ position: "relative", overflow: "hidden" }}>
                             {/* Section Heading */}
-                            <h2
+                {/* <h2
                                 style={{
                                     textAlign: "center",
                                     marginBottom: "40px",
@@ -258,10 +264,10 @@ export const About = () => {
                                 className="text-priamry"
                             >
                                 Industries We Serve
-                            </h2>
+                            </h2> */}
 
-                            {/* Cards */}
-                            <Row>
+                {/* Cards */}
+                {/* <Row>
                                 {[
                                     { name: "Cement", icon: "🏗️" },
                                     { name: "Coal", icon: "⛏️" },
@@ -304,12 +310,12 @@ export const About = () => {
                                         </div>
                                     </Col>
                                 ))}
-                            </Row>
-                        </div>
-                    </Container>
+                            </Row> */}
+                {/* </div>
+                    </Container> */}
 
-                    {/* JavaScript for Animation */}
-                    <script>
+                {/* JavaScript for Animation */}
+                {/* <script>
                         {`
     // document.addEventListener('DOMContentLoaded', () => {
     //   const items = document.querySelectorAll('.fade-in-right');
@@ -329,7 +335,7 @@ export const About = () => {
     `}
                     </script>
 
-                </section>
+                </section> */}
 
             </div>
             <Footer />

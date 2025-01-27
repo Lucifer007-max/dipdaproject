@@ -6,7 +6,7 @@ export function Footer() {
         <footer className="footer">
             {/* Left Section */}
             <div className="footer-left">
-                <h2 className="footer-logo"><img src={Logo} className="w-50"/></h2>
+                <h2 className="footer-logo"><img src={'https://www.geospectratech.com/images/logo.png'} className="w-50"/></h2>
                 <p className="footer-description">
                     Delivering excellence with sustainability and innovation.
                 </p>

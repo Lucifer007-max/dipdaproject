@@ -514,10 +514,17 @@ h2 {
 .industry_banner {
   width: 400px;
 }
-details{
+
+details {
   display: none;
 }
+
 @media (max-width:600px) {
+  .counter-container {
+
+    height: 100vh !important;
+  }
+
   p {
     font-size: 15px !important;
   }
@@ -686,6 +693,7 @@ details{
     flex-direction: column-reverse !important;
 
   }
+
   .video-container {
     z-index: -1;
   }
