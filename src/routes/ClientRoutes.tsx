@@ -44,9 +44,9 @@ const ClientRoute = ({ isLoggedInClient }: any) => {
 
   return isLoggedInClient ? (
     <>
-      <div ref={loadingRef} style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+      {/* <div ref={loadingRef} style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <img src={Logo} width={200} />
-      </div>
+      </div> */}
       <Suspense fallback={<></>}>
         <ClientLayout>
           <Outlet />

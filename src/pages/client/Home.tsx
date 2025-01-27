@@ -39,8 +39,8 @@ export function Home() {
           Your browser does not support the video tag.
         </video>
         <div className="overlay-text">
-          <h1>Your Centered Text</h1>
-          <p>Additional information here</p>
+          <h1>EXPLORE GEOGRAPHICAL PRESENCE</h1>
+          {/* <p>Additional information here</p> */}
         </div>
       </div>
 
