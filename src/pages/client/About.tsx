@@ -2,10 +2,8 @@ import "../../App.css";
 import { useEffect, useRef, useState } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import Aboutimg from "../../assets/about/task.gif";
-import Questioon from "../../assets/about/Questions.gif";
-import Aboutimg2 from "../../assets/about/Team spirit-rafiki.svg";
-import Question from "../../assets/about/Questions-pana.svg";
+import Aboutimg from "../../assets/about/wework.jpg";
+
 import { Footer } from "../../components/common/Footer";
 import Banner from '../../assets/breadcrumbs/about.jpg'
 import { Col, Container, Row } from "reactstrap";
@@ -32,27 +30,34 @@ export const About = () => {
             }, stepTime);
         };
 
-        incrementCounter(10, setExperience, 1000); // 10 years of experience
-        incrementCounter(250, setClients, 1000);  // 250 total clients
-        incrementCounter(15, setYears, 1000);     // 15 years in business
+        incrementCounter(10, setExperience, 1000);  
+        incrementCounter(250, setClients, 1000);  
+        incrementCounter(15, setYears, 1000);     
     }, []);
+    const scrollRef = useRef<any>(null);
+
+
+    useEffect(() => {
+        if (scrollRef.current) {
+          const scrollInstance = new LocomotiveScroll({
+            el: scrollRef.current,
+            smooth: true,
+            lerp: 0.1, // Adjust for smoothness
+          });
+    
+          return () => {
+            scrollInstance.destroy(); // Cleanup to prevent memory leaks
+          };
+        }
+      }, []);
 
     return (
-        <div className="margin_70">
+        <div className="margin_70" data-scroll-container ref={scrollRef}>
             <div >
-                {/* Section 1 */}
-                {/* <section className="about-header top_banner" style={{ minHeight: "100vh", background: `url(${Banner})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} >
-                    <Container>
-                        <div className="banner_text" style={{ zIndex: 9 }}  >
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, est.</p>
-                            <p style={{ fontSize: "45px", fontWeight: "400" }}>About Us</p>
-                        </div>
-                    </Container>
-                </section> */}
-
+ 
                 <CustomBreadcrum title={'About Us'} baseLine={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, sit?'} image={Banner} />
 
-                <div className="padding_tb">
+                <div className="padding_tb" data-scroll data-scroll-speed="3">
                     <Container>
                         <Row className="align-items-start">
                             <Col md={6}>
@@ -73,7 +78,7 @@ export const About = () => {
                     </Container>
                 </div>
 
-                <div className="padding_tb position-relative">
+                <div className="padding_tb position-relative" data-scroll data-scroll-speed="4">
                     <Container>
                         <Row className="align-items-start">
                             <Col md={4}>
@@ -121,7 +126,7 @@ export const About = () => {
                     </Container>
                 </div>
 
-                <div className="padding_tb">
+                <div className="padding_tb" data-scroll data-scroll-speed="5">
                     {/* Left Section */}
                     <Container>
                         <Row>
@@ -219,16 +224,16 @@ export const About = () => {
                             </section>
 
                         </Row>
-                        <div className="counter-container row mt-lg-5 mt-3">
-                            <div className="counter-item col-md-4 col-12">
+                        <div className="counter-container row mt-lg-5 mt-3" data-scroll data-scroll-speed="1">
+                            <div className="counter-item col-md-4 col-12" >
                                 <h2 className="counter-number">{experience}+</h2>
                                 <p className="counter-text">Years of Experience</p>
                             </div>
-                            <div className="counter-item  col-md-4 col-12">
+                            <div className="counter-item  col-md-4 col-12" >
                                 <h2 className="counter-number">{clients}+</h2>
                                 <p className="counter-text">Total Clients</p>
                             </div>
-                            <div className="counter-item  col-md-4 col-12">
+                            <div className="counter-item  col-md-4 col-12" >
                                 <h2 className="counter-number">{years}+</h2>
                                 <p className="counter-text">Years in Business</p>
                             </div>

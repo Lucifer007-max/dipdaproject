@@ -56,19 +56,17 @@ export function Gammaray() {
     <div className="margin_70">
       <CustomBreadcrum title={'PGNAA-Analyzers'} baseLine={' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ratione!'} image={GamaRays} />
       <Container>
-      {/* className="padding_tb" */}
+        {/* className="padding_tb" */}
         <section className="padding_tb">
           <Row className="justify-content-center">
-            {
-              CardList.map((res) => {
-                return <Col md={4} key={res.id} className="my-3 card_img"> <Card title={res.title} image={res.image} details={res.details} /></Col>
-              })
-            }
             <div className="my-5 row">
-              <h2 className="text-priamry text-center">Unparalleled Expertise in PGNAA Systems</h2>
+              {/* <h2 className="text-priamry text-center">Unparalleled Expertise in PGNAA Systems</h2> */}
+              <h2 className="h2_effect ">
+                <span className="h2_border text-center" data-text="Unparalleled Expertise in PGNAA Systems">Unparalleled Expertise in PGNAA Systems</span>
+              </h2>
               <h5 className="text-center mb-5"> Your Trusted Partner in Sales and Service Support</h5>
               <Col md={6} className="position-relative">
-              <img src={SideImg} className="w-100" />
+                <img src={SideImg} className="w-100" />
                 <img src={Trusted} className="trusted_img" />
               </Col>
               <Col md={6}>
@@ -99,6 +97,11 @@ export function Gammaray() {
               </Col>
 
             </div>
+            {
+              CardList.map((res) => {
+                return <Col md={4} key={res.id} className="my-3 card_img"> <Card title={res.title} image={res.image} details={res.details} /></Col>
+              })
+            }
 
 
 
@@ -107,7 +110,7 @@ export function Gammaray() {
           </Row>
         </section>
       </Container>
-           
+
       <Footer />
     </div>
   )

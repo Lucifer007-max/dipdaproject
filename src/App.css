@@ -520,9 +520,9 @@ details {
 }
 
 @media (max-width:600px) {
-  .counter-container {
+  .links, .dropdown-toggle {
 
-    height: 100vh !important;
+    color: #fff !important;
   }
 
   p {

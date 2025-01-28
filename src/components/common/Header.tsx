@@ -124,7 +124,7 @@ export function Header() {
                             </Link>
                         </li>
                         <li className="mx-3 overflow-hidden mb-0">
-                            <Link className="links" to="/contact" onClick={toggleMenu}>
+                            <Link className="links" to="/network" onClick={toggleMenu}>
                                 Our Network
                             </Link>
                         </li>

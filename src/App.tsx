@@ -12,6 +12,8 @@ const XRAYAnalyzer = lazy(() => import('./pages/client/service/XrayAnalyzers').t
 const PGNAAAnalyzer = lazy(() => import('./pages/client/service/Gammaray').then(module => ({ default: module.Gammaray })));
 const XRF = lazy(() => import('./pages/client/product/XrfSample').then(module => ({ default: module.XrfSample })));
 const Traning = lazy(() => import('./pages/client/Traning').then(module => ({ default: module.Traning })));
+
+const Network = lazy(() => import('./pages/client/Network').then(module => ({ default: module.Network })));
 const App: React.FC = () => {
   // const isLoggedInAdmin = sessionStorage.getItem("token") !== undefined ? true : false;
   const isLoggedInClient = sessionStorage.getItem("__ct") !== undefined ? true : false;
@@ -34,6 +36,7 @@ const App: React.FC = () => {
             {/* <Route path="/product/radiation-isotope-products" key="radiation-isotope-products" element={<XRF />} /> */}
 
             <Route path="/training" key="training" element={<Traning />} />
+            <Route path="/network" key="network" element={<Network />} />
           </Route>
 
 
