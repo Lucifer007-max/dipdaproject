@@ -50,12 +50,10 @@ export const XrayAnalyzers = () => {
             <Container>
                 <section className="my-5">
                     <Row className="justify-content-center">
-                        <div className="my-5 row">
-                            {/* <h2 className="text-priamry text-center">Unparalleled Expertise in PGNAA Systems</h2> */}
-                            <h2 className="h2_effect ">
+                        <div className="my-5 row align-items-center">
+                            <h2 className="h2_effect mb-4">
                                 <span className="h2_border text-center" data-text="Unparalleled Expertise in X-RAY Systems">Unparalleled Expertise in X-RAY Systems</span>
                             </h2>
-                            <h5 className="text-center mb-5"> Your Trusted Partner in Sales and Service Support</h5>
                             <Col md={6} className="position-relative">
                                 {/* 
                                 <img src={Trusted} className="trusted_img" /> */}
@@ -73,9 +71,9 @@ export const XrayAnalyzers = () => {
                                         <li>A highly skilled and experienced team of professionals capable of supporting virtually all models and makes of X-ray analyzers, including Thermo Fisher (ARL), PANalytical (Phillips), Bruker, Shimadzu, and more.</li>
                                         <li>Over 100 man-years of combined experience in servicing and supporting X-ray analyzer systems.</li>
                                         <li>A robust global network of partners and channel collaborators to ensure comprehensive support worldwide.</li>
-                                        <li>Provision of a wide range of spare parts to meet diverse operational needs.</li>
+                                        {/* <li>Provision of a wide range of spare parts to meet diverse operational needs.</li>
                                         <li>Supply of routine maintenance parts and consumables to ensure uninterrupted performance.</li>
-                                        <li>A dedicated, single-window 24x7x365 support service to address customer requirements promptly and efficiently.</li>
+                                        <li>A dedicated, single-window 24x7x365 support service to address customer requirements promptly and efficiently.</li> */}
                                     </ul>
 
                                 </h6>

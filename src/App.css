@@ -877,3 +877,47 @@ p {
   font-size: 1.2rem;
   margin-top: 10px;
 }
+
+
+
+/* CONATCT PAGE *//* ContactForm.css */
+
+/* Input fields with white background and light shadow */
+.form-control {
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated button */
+.animated-button {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.animated-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+.animated-button:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.animated-button:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+}

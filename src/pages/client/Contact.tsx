@@ -1,9 +1,10 @@
 import Map, { Layer, Source } from 'react-map-gl/maplibre';
 import CustomBreadcrum from "../../components/breadcrum/Breadcrum";
 import contact from '../../assets/contact/contact.svg'
-import { useState } from 'react';
+// import { useState } from 'react';
 import "mapbox-gl/dist/mapbox-gl.css"; // Add Mapbox CSS
 import { jsonData } from './mapsData/locations'
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 export const Contact = () => {
 
@@ -15,12 +16,70 @@ export const Contact = () => {
     <div className="margin_70">
       <CustomBreadcrum title={'CONTACT US'} baseLine={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis.'} image={contact} />
 
-      {/* <div className='contact_bg'>
-        <h1 className='text-center'>In case you need to find us.<br />
-          These are the coordinates for your biggest adventure yet.</h1>
-      </div> */}
       <div className='py-5'>
 
+        <Container className="my-5">
+          <Row>
+            {/* Form Column */}
+            <Col md="6">
+              <Form className="p-4 shadow-sm bg-white rounded">
+                <FormGroup>
+                  <Label for="name">Name</Label>
+                  <Input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                    className="form-control"
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="email">Email</Label>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    className="form-control"
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="phone">Phone Number</Label>
+                  <Input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    className="form-control"
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="message">Message</Label>
+                  <Input
+                    type="textarea"
+                    name="message"
+                    id="message"
+                    placeholder="Enter your message"
+                    className="form-control"
+                    rows="5"
+                  />
+                </FormGroup>
+                <Button color="primary" className="animated-button">
+                  Submit
+                </Button>
+              </Form>
+            </Col>
+
+            {/* Image Column */}
+            <Col md="6" className="d-flex align-items-center justify-content-center">
+              <img
+                src="https://via.placeholder.com/500x500" // Replace with your image URL
+                alt="Contact"
+                className="img-fluid rounded"
+              />
+            </Col>
+          </Row>
+        </Container>
         <Map
           reuseMaps
           dragRotate={false}

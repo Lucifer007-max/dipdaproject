@@ -5,6 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css"; // Add Mapbox CSS
 import { jsonData } from './mapsData/locations'
 import { FlagExample } from '../../components/common/Flag/Flag';
 import { Col, Container, Row } from 'reactstrap';
+import { Footer } from '../../components/common/Footer';
 
 export function Network() {
     const sourceId = "places";
@@ -14,7 +15,7 @@ export function Network() {
         <div className="margin_70">
             <CustomBreadcrum title={'Our Network'} baseLine={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis.'} image={contact} />
             <div className='py-4'>
-            <Container>
+                <Container>
                     <Row className="align-items-start">
                         <h2 className="h2_effect mt-5 mb-3">
                             <span className="h2_border text-center d-block" data-text="OUR GEOGRAPHICAL PRESENCE">OUR GEOGRAPHICAL PRESENCE</span>
@@ -65,20 +66,19 @@ export function Network() {
                             <span className="h2_border text-center d-block" data-text="Country Mark">Country Mark</span>
                         </h2>
                     </Row>
+                    <Row>
+                        {jsonData.features.map((feature) => (
+                            <Col sm="6" md="6" lg="3" key={feature.properties.id}>
+                                <FlagExample
+                                    countryCode={feature.properties.id}
+                                    countryName={feature.properties.name}
+                                />
+                            </Col>
+                        ))}
+                    </Row>
                 </Container>
-                <Row>
-                    {jsonData.features.map((feature) => (
-                        <Col sm="6" md="6" lg="3" key={feature.properties.id}>
-                            <FlagExample
-                                countryCode={feature.properties.id}
-                                countryName={feature.properties.name}
-                            />
-                        </Col>
-                    ))}
-                </Row>
-
             </div>
-
+            <Footer />
         </div>
     )
 }
